@@ -1,0 +1,84 @@
+.list {
+  $self: &;
+  margin-bottom: 30px;
+
+  &__button {
+    span {
+      font-size: 14px;
+      line-height: 17px;
+      color: #767676;
+    }
+
+    &:hover {
+      svg{
+        path{
+          stroke: black;
+        }
+      }
+      span {
+        color: black;
+      }
+    }
+  }
+
+  &__remove-icon {
+    opacity: 0;
+    transition: .5s;
+    fill:#E3E3E3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: .5s;
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      background: rgba(255,255,255, 0.5);
+    }
+
+    &.active {
+      background: #FFFFFF;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+
+    .badge {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: relative;
+      left: 5px;
+      margin-right: 8px;
+
+      &__green {
+        background: #42B883;
+      }
+
+      &__blue {
+        background: #64C4ED;
+      }
+
+      &__pink {
+        background: #FFBBCC;
+      }
+    }
+  }
+
+  span {
+    margin-left: 8px;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

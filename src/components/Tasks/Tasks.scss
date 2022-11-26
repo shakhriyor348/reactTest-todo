@@ -1,0 +1,160 @@
+.tasks {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 39px;
+    color: #64C4ED;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F2F2F2;
+
+    &:hover img {
+      opacity: 1;
+    }
+  }
+
+  &__edit-icon {
+    margin-left: 14px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &__form {
+    margin-top: 21px;
+
+    &-new {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      cursor: pointer;
+      opacity: 0.4;
+      transition: opacity 0.5s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.15px;
+      color: #B4B4B4;
+    }
+
+    .btn {
+      margin-top: 15px;
+      width: 145px;
+
+
+      &:disabled {
+        background: #B4B4B4;
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 30px;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      p {
+        font-size: 16px;
+        width: 100%;
+      }
+
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        & div:nth-of-type(1) {
+          margin-right: 15px;
+        }
+
+        & svg {
+          cursor: pointer;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 39px;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      color: #C9D1D3;
+      text-align: center;
+    }
+  }
+
+  .checkbox {
+
+    input:checked+label {
+      background: #4DD599;
+      border-color: #4DD599;
+
+      svg {
+        opacity: 1;
+
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      label {
+        background: #F2F2F2;
+        border-color: #F2F2F2;
+
+        svg {
+          opacity: 1;
+
+          path {
+            stroke: #B3B3B3;
+          }
+        }
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #E8E8E8;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: background 0.5s ease-in-out;
+
+      svg {
+        opacity: 0;
+      }
+    }
+
+
+
+  }
+
+
+}

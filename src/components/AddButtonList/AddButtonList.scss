@@ -1,0 +1,43 @@
+.add-list {
+
+
+    &-popup {
+        background: #FFFFFF;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 18px;
+        width: max-content;
+        position: relative;
+        &-colors {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        &-closeBtn {
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            cursor: pointer;
+        }
+    }
+
+
+    .btn {
+        width: 100%;
+        margin-top: 13px;
+    }
+
+
+    .badge {
+        width: 16px;
+        height: 16px;
+        position: static;
+        cursor: pointer;
+        border: 2px solid transparent;
+
+        &.active {
+            border: 2px solid #525252;
+        }
+    }
+}
